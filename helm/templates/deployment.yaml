@@ -31,7 +31,7 @@ spec:
               path: nginx.conf
       containers:
       - name: nginx
-        image: arun596/k8-frontend:{{ .Values.deployment.imageversion }}
+        image: "{{ .Values.deployment.imageURL }}:{{ .Values.deployment.version }}"
         resources:
           # soft limit
           requests:
