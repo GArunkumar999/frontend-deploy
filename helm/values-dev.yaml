@@ -1,9 +1,9 @@
 deployment:
   version: IMAGE_VERSION
   imageURL: 435238037339.dkr.ecr.us-east-1.amazonaws.com/expense/frontend
-  replicas: 3
+  replicas: 1
 hpa:
-  minreplicas: 2
+  minreplicas: 1
   maxreplicas: 10
   cpuutilisation: 5
 tgb:
