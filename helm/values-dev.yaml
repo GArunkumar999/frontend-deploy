@@ -3,7 +3,7 @@ deployment:
   imageURL: 435238037339.dkr.ecr.us-east-1.amazonaws.com/expense/frontend
   replicas: 3
 hpa:
-  minreplicas: 1
+  minreplicas: 2
   maxreplicas: 10
   cpuutilisation: 5
 tgb:
