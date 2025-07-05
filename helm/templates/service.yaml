@@ -1,15 +1,19 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: frontend
   namespace: expense
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
 spec:
   type: LoadBalancer
-  selector: # labels are used as selectors
+  externalTrafficPolicy: Cluster
+  selector:
     app: frontend
     tier: web
     project: expense
   ports:
-  - protocol: TCP
-    port: 80 # service port
-    targetPort: 8080
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
