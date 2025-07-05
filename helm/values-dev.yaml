@@ -7,4 +7,4 @@ hpa:
   maxreplicas: 10
   cpuutilisation: 5
 tgb:
-  arn: arn:aws:elasticloadbalancing:us-east-1:435238037339:targetgroup/nginx/405f50512d6b622f
+  arn: arn:aws:elasticloadbalancing:us-east-1:435238037339:targetgroup/k8s-expense-frontend-afc664316a/fa81d06a90f21a3e
